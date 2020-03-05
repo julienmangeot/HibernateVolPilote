@@ -4,8 +4,9 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Home page of our compagny</title>
+	<title>Insert title here</title>
 	<style><%@ include file="bootstrap.min.css" %></style>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -30,6 +31,13 @@
     </ul>
   </div>
 </nav>
-<h1>Bienvenue !!!!</h1>
+<div>
+	<c:forEach items="${listing}" var="fr">
+		<h2> Id Pilote: ${fr.idPilote} </h2>
+		<h2> Nom Pilote:  ${fr.nomPilote}</h2>
+		<h2> Prenom Pilote:  ${fr.prenomPilote}</h2>
+		<h2> Telephone Pilote:  ${fr.telephone}</h2>
+	</c:forEach>
+</div>
 </body>
 </html>

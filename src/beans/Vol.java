@@ -1,6 +1,6 @@
 package beans;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,6 +20,10 @@ public class Vol {
 	private Pilote pilote;
 	
 	public Vol() {
+	}
+
+	public Vol(Date dateVol) {
+		this.dateVol = dateVol;
 	}
 
 	public Vol(Date dateVol, Pilote pilote) {

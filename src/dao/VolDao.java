@@ -31,7 +31,6 @@ public class VolDao implements IVolDao{
 		}
 	}
 
-
 	public List<Vol> getVols(){
 		List<Vol> list =new ArrayList<Vol>();
 		try {
