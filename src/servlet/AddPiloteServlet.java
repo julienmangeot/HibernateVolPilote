@@ -45,7 +45,7 @@ public class AddPiloteServlet extends HttpServlet {
 		pilote.setTelephone(request.getParameter("phone"));
 		
 		daoP.createPilote(pilote);
-		this.getServletContext().getRequestDispatcher("/WEB-INF/webpages/showingpilote.jsp").forward(request, response);
+		this.getServletContext().getRequestDispatcher("/showp").forward(request, response);
 	}
 
 }

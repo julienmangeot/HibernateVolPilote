@@ -56,8 +56,8 @@ public class Pilote {
 	}
 
 	public String toString() {
-		return "Pilote [idPilote=" + idPilote + ", nomPilote=" + nomPilote + ", prenomPilote=" + prenomPilote
-				+ ", telephone=" + telephone + "]";
+		return "id :"+ idPilote + ", Nom :" + nomPilote + ", Prenom :" + prenomPilote
+				+ ", Telephone :" + telephone;
 	}
 	
 }

@@ -56,17 +56,22 @@ public class AddVolServlet extends HttpServlet {
 		Vol vol = new Vol();
 		Pilote pilote = new Pilote();
 		pilote.setIdPilote(Integer.parseInt(request.getParameter("pilotefly")));
-		
+		System.out.println("on veut le vol");
 		try {
+			System.out.println("try");
 			Date date = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("date"));
+			vol.setDateVol(date);
+			System.out.println("coucou"+date);
 		} catch (ParseException e) {
 			e.printStackTrace();
+			System.out.println("echec try");
 		}
+	
 		vol.setPilote(pilote);
 		daoV.createVol(vol);
 		
 		
-		this.getServletContext().getRequestDispatcher("/WEB-INF/webpages/showingvol.jsp").forward(request, response);
+		this.getServletContext().getRequestDispatcher("/showv").forward(request, response);
 	
 	}
 

@@ -36,7 +36,7 @@
 <h1>Add a fly here</h1>
   <div class="form-group">
     <label>Fly Date</label>
-    <input type="text" class="form-control" name="date" id="flydate" placeholder="Enter a date">
+    <input type="date" class="form-control" name="date" id="flydate" placeholder="Enter a date">
   </div>
   <div class="form-group">
     <label>Fly Pilote</label>

@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Vol {
@@ -14,6 +16,7 @@ public class Vol {
 	@Id
 	@GeneratedValue
 	private int idVol;
+	@Temporal(TemporalType.DATE)
 	private Date dateVol;
 	@JoinColumn(name="idPilote")
 	@ManyToOne
